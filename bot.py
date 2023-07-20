@@ -90,11 +90,13 @@ bot = MyBot(txt.TOKEN)
 def send_help(message):
     bot.send_welcome(message)
 
-@bot.message_handler(commands=["help", "nextstep", "last_selfi", "high_school", "chat_gpt", "sql"])
+@bot.message_handler(commands=["help", "nextstep", "about", "last_selfi", "high_school", "chat_gpt", "sql"])
 def send_answer(message):
     match message.text:
         case '/help':
             bot.reply_to(message, txt.HELP_MESSAGE)
+        case '/about':
+            bot.send_about(message)
         case '/nextstep':
             bot.reply_to(message, txt.NEXT_STEP_MESSAGE)
             bot.register_next_step_handler(message, bot.resend_message)
