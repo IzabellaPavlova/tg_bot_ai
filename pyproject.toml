@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tg-bot-ai"
+version = "0.1.0"
+description = ""
+authors = ["Izabella Pavlova <izabella1612@mail.ru>"]
+readme = "README.md"
+packages = [{include = "tg_bot_ai"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pillow = "^10.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
